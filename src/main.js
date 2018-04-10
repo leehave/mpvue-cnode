@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App'
-
+var Fly = require("flyio/dist/npm/wx")
 Vue.config.productionTip = false
 App.mpType = 'app'
-
+var fly = new Fly
+Vue.prototype.$http = fly
 const app = new Vue(App)
 app.$mount()
 

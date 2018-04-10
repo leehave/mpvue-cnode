@@ -1,3 +1,3 @@
 export const baseUrl = {
-  cnode: '//cnodejs.org/api/v1'
+  cnode: 'https://cnodejs.org/api/v1'
 }

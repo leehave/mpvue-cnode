@@ -22,6 +22,7 @@
 
 <script>
 import card from "@/components/card"
+import {baseUrl} from '@/utils/api'
 export default {
   data() {
     return {
@@ -60,6 +61,17 @@ export default {
     },
     fetchTopics() {
      console.log('测试测试')
+     this.$http.get(baseUrl.cnode+"/topics",{
+       params: {
+            limit: 40,
+            mdrender: false,
+            tab: 'all',
+            page: this.page
+          }
+     }).then(res=>{
+       this.topics = res.data.data;
+       console.log(this.topics)
+     }).catch()
     }
   },
 
