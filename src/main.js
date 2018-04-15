@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+// import '../static/css/weui.css'
 var Fly = require("flyio/dist/npm/wx")
 Vue.config.productionTip = false
 App.mpType = 'app'
